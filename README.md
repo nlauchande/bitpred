@@ -7,3 +7,6 @@ V0.01 - Features
 * Combine data with relevant influencers data ( Twitter for ) now
 * Create a complete e2e backend classifier and ML pipeline
 
+# data 
+Currently using live streams from : http://www.cryptodatadownload.com/ 
+
