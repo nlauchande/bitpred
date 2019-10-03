@@ -29,7 +29,7 @@ From github:
 ## How to run a listening prediction api
 Using the id of the model and the model name you can run the following commnad :
 
-`$  mlflow models serve -m runs:/run_id/modelA1/ -p 1234  .`
+`$  mlflow models serve -m ./mlruns/0/b9ee36e80a934cef9cac3a0513db515c/artifacts/model_random_forest/ `
 
 
 ## How to run a prediction
@@ -37,5 +37,9 @@ Using the id of the model and the model name you can run the following commnad :
 `curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data":[[1,1,1,1,0,1,1,1,0,1,1,1,0,0]]}'                                                                                                            
 [1]%`
 
+
+
 ## How to add a new algorithm
 You can modify the train.py file .
+
+
