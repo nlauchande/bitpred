@@ -8,6 +8,7 @@ V0.01 - Features
 * Create a complete e2e backend classifier and ML pipeline
 
 # data 
+<<<<<<< HEAD
 Currently using live streams from : Yahoo 
 
 ## How to run training
@@ -42,4 +43,6 @@ Using the id of the model and the model name you can run the following commnad :
 ## How to add a new algorithm
 You can modify the train.py file .
 
-
+=======
+Currently using live streams from Yahoo.
+ 
