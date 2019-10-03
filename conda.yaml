@@ -1,0 +1,9 @@
+name: bitpred
+channels:
+  - defaults
+  - anaconda
+dependencies:
+  - python==3.6
+  - scikit-learn=0.19.1
+  - pip:
+    - mlflow>=1.3
