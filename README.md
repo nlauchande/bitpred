@@ -3,10 +3,39 @@ Open source bitcoin price movement prediction engine.
 
 V0.01 - Features
 * Is it "going down" - tomorrow ( within 24hours) api backend classifier
-* Get data from public sources
+* Get data from public sources (yahoo)
 * Combine data with relevant influencers data ( Twitter for ) now
 * Create a complete e2e backend classifier and ML pipeline
 
 # data 
-Currently using live streams from : http://www.cryptodatadownload.com/ 
+Currently using live streams from : Yahoo 
 
+## How to run training
+
+### Install MLFlow locally
+`$ pip install mlflow`
+
+
+### From mlflow 
+
+Locally:
+`$ mlflow run .`
+
+From github:
+`$ mlflow run https://github.com/nlauchande/bitpred/ `
+
+
+
+## How to run a listening prediction api
+Using the id of the model and the model name you can run the following commnad :
+
+`$  mlflow models serve -m runs:/run_id/modelA1/ -p 1234  .`
+
+
+## How to run a prediction
+
+`curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data":[[1,1,1,1,0,1,1,1,0,1,1,1,0,0]]}'                                                                                                            
+[1]%`
+
+## How to add a new algorithm
+You can modify the train.py file .
