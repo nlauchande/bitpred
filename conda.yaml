@@ -1,5 +1,4 @@
-name: bitpred
-channels:
+name: bitpredx§
   - defaults
   - anaconda
 dependencies:

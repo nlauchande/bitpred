@@ -16,7 +16,6 @@ from sklearn.metrics import precision_score
 from sklearn.metrics import recall_score
 from sklearn.metrics import f1_score
 
-
 import mlflow.sklearn
 
 
@@ -72,16 +71,17 @@ if __name__ == "__main__":
 
     training_data = acquire_training_data()
 
-    prepared_training_data = prepare_training_data(training_data)
+    prepared_training_data_df = prepare_training_data(training_data)
+    prepared_training_data_df.to_csv("test.csv")
 
-    print(len(prepared_training_data))
+    print(len(prepared_training_data_df))
 
-    btc_mat = prepared_training_data.as_matrix()
+    btc_mat = prepared_training_data_df.as_matrix()
 
     WINDOW_SIZE = 14
 
     X = rolling_window(btc_mat[:, 7], WINDOW_SIZE)[:-1, :]
-    Y = prepared_training_data['to_predict'].as_matrix()[WINDOW_SIZE:]
+    Y = prepared_training_data_df['to_predict'].as_matrix()[WINDOW_SIZE:]
 
     X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.25, random_state=4284, stratify=Y)
 
