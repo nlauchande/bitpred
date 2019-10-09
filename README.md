@@ -8,7 +8,6 @@ V0.01 - Features
 * Create a complete e2e backend classifier and ML pipeline
 
 # data 
-<<<<<<< HEAD
 Currently using live streams from : Yahoo 
 
 ## How to run training
@@ -37,6 +36,10 @@ Using the id of the model and the model name you can run the following commnad :
 
 `curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data":[[1,1,1,1,0,1,1,1,0,1,1,1,0,0]]}'                                                                                                            
 [1]%`
+
+## How to monitor experiments with MLFlow
+
+### Run the server
 
 
 

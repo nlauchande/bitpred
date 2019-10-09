@@ -59,9 +59,6 @@ if __name__ == "__main__":
         training_data = acquire_training_data()
 
         prepared_training_data_df = prepare_training_data(training_data)
-        prepared_training_data_df.to_csv("test.csv")
-
-        print(len(prepared_training_data_df))
 
         btc_mat = prepared_training_data_df.as_matrix()
 
@@ -72,16 +69,9 @@ if __name__ == "__main__":
 
         X_train, X_test, y_train, y_test = train_test_split(X, Y, test_size=0.25, random_state=4284, stratify=Y)
 
-        clf = RandomForestClassifier(bootstrap=True, class_weight=None, criterion='gini',
-                               max_depth=None, max_features='auto', max_leaf_nodes=None,
-                               min_impurity_decrease=0.0, min_impurity_split=None,
-                               min_samples_leaf=1, min_samples_split=2,
-                               min_weight_fraction_leaf=0.0, n_estimators=50, n_jobs=None,
-                               oob_score=False, random_state=4284, verbose=0,
-                               warm_start=False)
+        clf = RandomForestClassifier(bootstrap=True, criterion='gini', min_samples_split=2, min_weight_fraction_leaf=0.0, n_estimators=50, random_state=4284, verbose=0)
 
         clf.fit(X_train, y_train)
-
 
         predicted = clf.predict(X_test)
 
