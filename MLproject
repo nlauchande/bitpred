@@ -1,6 +1,7 @@
 name: BitPred
 
-conda_env: conda.yaml
+docker_env:
+  image:  bitpred-docker
 
 entry_points:
   main:
