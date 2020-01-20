@@ -1,4 +1,4 @@
-name: BitPred
+name: bitpred
 
 docker_env:
   image:  bitpred-docker
