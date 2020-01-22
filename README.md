@@ -49,3 +49,15 @@ You can modify the train.py file .
 =======
 Currently using live streams from Yahoo.
  
+## GitHub Issues
+
+
+### Features
+
+We also use the issue tracker to track features. If you have an idea for a feature, or think you can help kops become even more awesome follow the steps below.
+
+- Open a [new issue](https://github.com/nlauchande/bitpred/issues/new).
+- Remember users might be searching for your issue in the future, so please give it a meaningful title to help others.
+- Clearly define the use case, using concrete examples. EG: I type `this` and kops does `that`.
+- Some of our larger features will require some design. If you would like to include a technical design for your feature please include it in the issue.
+- After the new feature is well understood, and the design agreed upon we can start coding the feature. We would love for you to code it. So please open up a **WIP** *(work in progress)* pull request, and happy coding.
