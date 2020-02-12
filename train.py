@@ -75,7 +75,7 @@ if __name__ == "__main__":
 
         predicted = clf.predict(X_test)
 
-        mlflow.sklearn.log_model(clf, "model_random_forest",registered_model_name="RandomForestModel")
+        mlflow.sklearn.log_model(clf, "model_random_forest")
 
         print(classification_report(y_test, predicted))
 
