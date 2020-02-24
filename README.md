@@ -6,6 +6,7 @@ V0.01 - Features
 * Get data from public sources (yahoo)
 * Combine data with relevant influencers data ( Twitter for ) now
 * Create a complete e2e backend classifier and ML pipeline
+* Deployable artefact
 
 # data 
 Currently using live streams from : Yahoo 
