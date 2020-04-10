@@ -11,37 +11,28 @@ V0.01 - Features
 # data 
 Currently using live streams from : Yahoo 
 
-## How to run training
+## How to run locally
 
 ### Install MLFlow locally
 `$ pip install mlflow`
 
 
-### From mlflow 
+### From make
 
 Locally:
-`$ mlflow run .`
-
-From github:
-`$ mlflow run https://github.com/nlauchande/bitpred/ `
-
+`make run`
 
 
 ## How to run a listening prediction api
 Using the id of the model and the model name you can run the following commnad :
 
-`$  mlflow models serve -m ./mlruns/0/b9ee36e80a934cef9cac3a0513db515c/artifacts/model_random_forest/ `
+`$make serve`
 
 
 ## How to run a prediction
 
 `curl http://127.0.0.1:5000/invocations -H 'Content-Type: application/json' -d '{"data":[[1,1,1,1,0,1,1,1,0,1,1,1,0,0]]}'                                                                                                            
 [1]%`
-
-## How to monitor experiments with MLFlow
-
-### Run the server
-
 
 
 ## How to add a new algorithm
